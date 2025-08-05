@@ -1,10 +1,10 @@
 package module06.question01.controller;
 
-import com.spring.professional.exam.tutorial.module06.question01.dao.EmployeesDao;
-import com.spring.professional.exam.tutorial.module06.question01.ds.Employee;
-import com.spring.professional.exam.tutorial.module06.question01.security.annotations.employees.IsEmployeesCreate;
-import com.spring.professional.exam.tutorial.module06.question01.security.annotations.employees.IsEmployeesDelete;
-import com.spring.professional.exam.tutorial.module06.question01.security.annotations.employees.IsEmployeesRead;
+import module06.question01.dao.EmployeesDao;
+import module06.question01.ds.Employee;
+import module06.question01.security.annotations.employees.IsEmployeesCreate;
+import module06.question01.security.annotations.employees.IsEmployeesDelete;
+import module06.question01.security.annotations.employees.IsEmployeesRead;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;

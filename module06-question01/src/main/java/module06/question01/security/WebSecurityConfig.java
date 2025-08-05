@@ -11,7 +11,7 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler;
 
-import static com.spring.professional.exam.tutorial.module06.question01.security.SecurityRoles.*;
+import static module06.question01.security.SecurityRoles.*;
 
 @Configuration
 @EnableWebSecurity
