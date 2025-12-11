@@ -2,6 +2,7 @@ package module06.question01.ds;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,24 +15,24 @@ import static javax.persistence.GenerationType.IDENTITY;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class Department {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Integer id;
+
     @NotBlank
     @Size(min = 2, max = 5, message = "Code must have length of 2 - 5 characters")
     @Pattern(regexp = "[A-Za-z]*", message = "Code contains illegal characters")
     private String code;
+
     @NotBlank
     @Pattern(regexp = "[A-Za-z ]*", message = "Name contains illegal characters")
     private String name;
+
     @NotBlank
     @Pattern(regexp = "[A-Za-z ]*", message = "Country contains illegal characters")
     private String country;
-
-    @SuppressWarnings("unused")
-    public Department() {
-    }
 }

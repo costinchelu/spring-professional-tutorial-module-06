@@ -1,6 +1,8 @@
 package module06.question01.security;
 
+// collection of security roles
 public interface SecurityRoles {
+
     String ROLE_PREFIX = "ROLE_";
 
     String SUPER_ADMIN = "SUPER_ADMIN";

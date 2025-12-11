@@ -13,6 +13,8 @@ import org.springframework.security.config.annotation.method.configuration.Globa
 @EnableGlobalMethodSecurity(securedEnabled = true)
 public class GlobalMethodSecurityConfig extends GlobalMethodSecurityConfiguration {
 
+    // created from configuration
+    // roles are hierarchical
     @Autowired
     private RoleHierarchy roleHierarchy;
 

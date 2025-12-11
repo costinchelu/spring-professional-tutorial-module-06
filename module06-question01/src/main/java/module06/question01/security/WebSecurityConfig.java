@@ -20,6 +20,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private RoleHierarchy roleHierarchy;
 
+    // HTTP security configuration
+    // for all users, access is permitted to "/", "/home" and "/login", "/login-error", "/logout"
+    // the login form is "/login"
+    // the login failure url is "/login-error"
+    // the logout urls are "/logout" and "/login" (after logout)
+    // for other urls we need to check specific roles:
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
@@ -42,6 +48,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll();
     }
 
+    // Hardcoded in-memory users for testing purposes
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();

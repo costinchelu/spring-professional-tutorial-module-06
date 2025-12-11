@@ -22,6 +22,7 @@ public class CustomersController {
     @Autowired
     private CustomersDao customersDao;
 
+    // these annotations will enforce security checks (they have @Secured)
     @IsCustomersRead
     @GetMapping("/customers")
     public ModelAndView index() {
