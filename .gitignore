@@ -12,6 +12,10 @@ target/
 .idea/workspace.xml
 .idea/dataSources/
 .idea/dataSources.local.xml
+.idea/encodings.xml
+.idea/codeStyles
+.idea/.gitignore
+.idea/copilot*
 *.iws
 *.iml
 *.ipr
