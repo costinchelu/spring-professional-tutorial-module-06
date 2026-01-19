@@ -1,5 +1,8 @@
 drop table if exists authorities;
 drop table if exists users;
+drop table if exists employee;
+drop table if exists department;
+drop table if exists customer;
 
 create table users(
     username varchar(50) not null primary key,
@@ -14,3 +17,27 @@ create table authorities (
 );
 
 create unique index ix_auth_username on authorities (username,authority);
+
+create table employee (
+                          id int primary key,
+                          first_name varchar(100) not null,
+                          last_name varchar(100) not null,
+                          phone_number varchar(20),
+                          address varchar(255),
+                          cubicle_no varchar(20)
+);
+
+create table department (
+                            id int primary key,
+                            code varchar(10) not null,
+                            name varchar(100) not null,
+                            country varchar(50)
+);
+
+create table customer (
+                          id int primary key,
+                          code varchar(10) not null,
+                          first_name varchar(100) not null,
+                          last_name varchar(100) not null,
+                          address varchar(255)
+);
